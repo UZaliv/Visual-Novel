@@ -1,0 +1,4 @@
+repository "VisualNovel@distroer937@cloud"
+  path "/"
+    br "/main"
+    co "/main"
