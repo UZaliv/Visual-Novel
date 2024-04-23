@@ -6,12 +6,19 @@ using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
-    [SerializeField] string _saing;
+    [SerializeField] string[] _saingRus;
+    [SerializeField] string[] _saingEng;
     [SerializeField] TextMeshProUGUI _dialogWindow;
-    [SerializeField] Slider _saingDelay;
     [SerializeField] AudioSource _sounds;
-    [SerializeField] AudioClip[] _audioDialog;
+    [SerializeField] AudioClip[] _audioDialogRus;
+    [SerializeField] AudioClip[] _audioDialogEng;
     bool _isSaing;
+    float _saingDelay;
+
+    private void Start()
+    {
+        _saingDelay = PlayerPrefs.GetFloat("SaingDlay");
+    }
 
     void Update()
     {
@@ -25,11 +32,26 @@ public class Dialog : MonoBehaviour
     }
     IEnumerator Saing()
     {
-        _sounds.PlayOneShot(_audioDialog[0]);
-        for(int i = 0;i<_saing.Length; i++)
+        string saing = _saingRus[0];
+        AudioClip audioDialog = _audioDialogRus[0];
+        if (PlayerPrefs.GetString("Language") == "Rus")
         {
-            _dialogWindow.text += _saing[i];
-            yield return new WaitForSeconds(_saingDelay.value);
+            saing = _saingRus[0];
+            audioDialog = _audioDialogRus[0];
+        }
+        else
+        {
+            if(PlayerPrefs.GetString("Language") == "Eng")
+            {
+                saing = _saingEng[0];
+                audioDialog = _audioDialogEng[0];
+            }
+        }
+        _sounds.PlayOneShot(audioDialog);
+        for(int i = 0;i<saing.Length; i++)
+        {
+            _dialogWindow.text += saing[i];
+            yield return new WaitForSeconds(_saingDelay);
         }
         _isSaing =false;
         Debug.Log("Saing end");
