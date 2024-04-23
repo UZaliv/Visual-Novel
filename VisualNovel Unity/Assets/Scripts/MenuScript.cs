@@ -91,11 +91,6 @@ public class MenuScript : MonoBehaviour
     public void LoadSetings()
     {
         string languageSetings = PlayerPrefs.GetString("language");
-        if (languageSetings != null)
-        {
-            languageSetings = "Rus";
-            PlayerPrefs.SetString ("language", "Rus");
-        }
         string[] language = _russianText;
         Vector2[] pos = _elemetsPosRus;
         if (languageSetings == "Rus")
@@ -113,6 +108,14 @@ public class MenuScript : MonoBehaviour
                 pos = _elemetsPosEng;
                 _language.value = 1;
                 Debug.Log("Load English");
+            }
+            else
+            {
+                PlayerPrefs.SetString("language", "Rus");
+                language = _russianText;
+                pos = _elemetsPosRus;
+                _language.value = 0;
+                Debug.Log("Load Russian");
             }
         }
 
