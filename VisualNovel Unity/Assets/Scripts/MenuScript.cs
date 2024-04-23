@@ -5,8 +5,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static Unity.VisualScripting.Icons;
-using static UnityEditor.PlayerSettings;
 
 public class MenuScript : MonoBehaviour
 {
@@ -64,7 +62,7 @@ public class MenuScript : MonoBehaviour
         {
             language = _russianText;
             pos = _elemetsPosRus;
-            PlayerPrefs.SetString("Language", "Rus");
+            PlayerPrefs.SetString("language", "Rus");
         }
         else
         {
@@ -72,7 +70,7 @@ public class MenuScript : MonoBehaviour
             {
                 language = _englishText;
                 pos = _elemetsPosEng;
-                PlayerPrefs.SetString("Language", "Eng");
+                PlayerPrefs.SetString("language", "Eng");
             }
         }
         Debug.Log("Set language " + _language.options[_language.value].text);
@@ -93,12 +91,18 @@ public class MenuScript : MonoBehaviour
     public void LoadSetings()
     {
         string languageSetings = PlayerPrefs.GetString("language");
+        if (languageSetings != null)
+        {
+            languageSetings = "Rus";
+            PlayerPrefs.SetString ("language", "Rus");
+        }
         string[] language = _russianText;
         Vector2[] pos = _elemetsPosRus;
         if (languageSetings == "Rus")
         {
             language = _russianText;
             pos = _elemetsPosRus;
+            _language.value = 0;
             Debug.Log("Load Russian");
         }
         else
@@ -107,6 +111,7 @@ public class MenuScript : MonoBehaviour
             {
                 language = _englishText;
                 pos = _elemetsPosEng;
+                _language.value = 1;
                 Debug.Log("Load English");
             }
         }
@@ -115,10 +120,14 @@ public class MenuScript : MonoBehaviour
         {
             _texts[i].text = language[i];
         }
+        Debug.Log("Text " + languageSetings + " load");
         for (int i = 0; i < _elemetsUI.Length; i++)
         {
             Debug.Log("pos UI element " + i + " = " + _elemetsUI[i].transform.position);
             _elemetsUI[i].transform.position = pos[i];
         }
+        Debug.Log("Pos load");
+        _saingDelay.value = PlayerPrefs.GetFloat("SaingDlay");
+        Debug.Log("Saing dlay load");
     }
 }

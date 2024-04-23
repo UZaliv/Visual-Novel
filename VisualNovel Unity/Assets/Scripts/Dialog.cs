@@ -18,6 +18,7 @@ public class Dialog : MonoBehaviour
     private void Start()
     {
         _saingDelay = PlayerPrefs.GetFloat("SaingDlay");
+        Debug.Log("load Saing dlay");
     }
 
     void Update()
@@ -34,17 +35,20 @@ public class Dialog : MonoBehaviour
     {
         string saing = _saingRus[0];
         AudioClip audioDialog = _audioDialogRus[0];
-        if (PlayerPrefs.GetString("Language") == "Rus")
+        string language = PlayerPrefs.GetString("language");
+        if (language == "Rus")
         {
             saing = _saingRus[0];
             audioDialog = _audioDialogRus[0];
+            Debug.Log("load Rus");
         }
         else
         {
-            if(PlayerPrefs.GetString("Language") == "Eng")
+            if(language == "Eng")
             {
                 saing = _saingEng[0];
                 audioDialog = _audioDialogEng[0];
+                Debug.Log("load Eng");
             }
         }
         _sounds.PlayOneShot(audioDialog);

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\Visual-Novel\\VisualNovel Unity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C392580-8113-2223-0666-8AD434555222}|Assembly-CSharp.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\visual-novel\\visualnovel unity\\assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C392580-8113-2223-0666-8AD434555222}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5C392580-8113-2223-0666-8AD434555222}|Assembly-CSharp.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\visual-novel\\visualnovel unity\\assets\\scripts\\menuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C392580-8113-2223-0666-8AD434555222}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C392580-8113-2223-0666-8AD434555222}|Assembly-CSharp.csproj|D:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\Visual-Novel\\VisualNovel Unity\\assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C392580-8113-2223-0666-8AD434555222}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Dialog.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\Visual-Novel\\VisualNovel Unity\\Assets\\Scripts\\Dialog.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Dialog.cs",
               "ToolTip": "D:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\Visual-Novel\\VisualNovel Unity\\Assets\\Scripts\\Dialog.cs",
               "RelativeToolTip": "Assets\\Scripts\\Dialog.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAnAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACUAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T13:19:05.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MenuScript.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\Visual-Novel\\VisualNovel Unity\\Assets\\Scripts\\MenuScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuScript.cs",
               "ToolTip": "D:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\Visual-Novel\\VisualNovel Unity\\Assets\\Scripts\\MenuScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\MenuScript.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAG0AAAAqAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGAAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T10:12:02.397Z",
               "EditorCaption": ""
